@@ -94,7 +94,7 @@ namespace RSA
                     while (sr.Peek() >= 0)
                     {
                         BigInteger i = 0;
-                        nombre = (char)sr.Read();
+                        nombre = (byte)sr.Read();
 
                         nombre = modpow(nombre, E, N);
 
@@ -170,7 +170,7 @@ namespace RSA
                     {
                         File.Delete(fluxSortant);
                     }
-                    File.AppendAllText(fluxSortant, texte);
+                    File.AppendAllText(fluxSortant, texte, UnicodeEncoding.Unicode);
 
                     return "Dechiffrage effectué avec succès!";
                 }
