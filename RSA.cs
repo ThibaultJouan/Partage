@@ -94,7 +94,7 @@ namespace RSA
                     while (sr.Peek() >= 0)
                     {
                         BigInteger i = 0;
-                        nombre = (byte)sr.Read();
+                        nombre = sr.Read();
 
                         nombre = modpow(nombre, E, N);
 
